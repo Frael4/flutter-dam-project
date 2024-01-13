@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "814177918884",
+    "project_id": "findyourfood-405618",
+    "storage_bucket": "findyourfood-405618.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814177918884:android:6cc83d86b32a3e77edab31",
+        "android_client_info": {
+          "package_name": "com.example.f_maps_firestore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxhdgC-C01LU5SnCPQcp35ptHSd10QeZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814177918884:android:a29c2515eec74a6bedab31",
+        "android_client_info": {
+          "package_name": "com.example.flutter_maps_firestore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxhdgC-C01LU5SnCPQcp35ptHSd10QeZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
