@@ -2,7 +2,6 @@ import 'package:f_maps_firestore/firebase_options.dart';
 import 'package:flutter/material.dart';
 
 import 'dart:async';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -17,43 +16,18 @@ const _pinkHue = 350.0;
 // Places API client used for Place Photos
 final _placesApiClient = GoogleMapsPlaces(apiKey: googleMapsApiKey);
 
-// Metodo principal
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
-  runApp(const App());
-}
-
-class App extends StatelessWidget {
-  const App({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Maps Flutter",
-      home: const HomePage(title: 'Maps Flutter 3'),
-      theme: ThemeData(
-          colorSchemeSeed: Color.fromARGB(255, 82, 36, 221),
-          scaffoldBackgroundColor: Color.fromARGB(255, 209, 194, 199),
-          useMaterial3: true),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({required this.title, super.key});
-  final String title;
+class MapPage extends StatefulWidget {
+  /* const MapPage({required this.title, super.key}); */
+  const MapPage({super.key});
+  /* final String title; */
 
   @override
   State<StatefulWidget> createState() {
-    return _HomePageState();
+    return _MapPageState();
   }
 }
 
-class _HomePageState extends State<HomePage> {
+class _MapPageState extends State<MapPage> {
   late Stream<QuerySnapshot> _iceCreamStores;
   final Completer<GoogleMapController> googleMapController = Completer();
 
@@ -71,14 +45,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text('Ubicacion'),//Text(widget.title),
       ),
       body: StreamBuilder<QuerySnapshot>(
         stream: _iceCreamStores,
         builder: (context, snapshot) {
           return switch (snapshot) {
             AsyncSnapshot(hasError: true) =>
-              Center(child: Text('Error: ${snapshot.error}')),
+              Center(child: Text('Error: ${snapshot.error}' , style: const TextStyle(color: Colors.white),)),
             AsyncSnapshot(hasData: false) =>
               const Center(child: Text('Loading ...')),
             _ => Stack(
