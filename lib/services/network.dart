@@ -1,9 +1,11 @@
 import 'dart:convert';
-import 'package:f_maps_firestore/Product.dart';
+//import 'dart:ui';
+import 'package:f_maps_firestore/product.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
+//import 'dart:io';
 
-
-Future<List<Product>> getProducts() async {
+Future<List<Product>> getProducts_() async {
 
   final response = await http.get(Uri.parse('https://dummyjson.com/products'));
 
@@ -18,3 +20,35 @@ Future<List<Product>> getProducts() async {
     throw Exception("Error consultando productos");
   }
 }
+
+
+Future<List<Product_>> getProducts() async {
+  
+  String jsonString = await rootBundle.loadString('assets/productlist.json');
+
+  
+  List<dynamic> productsJson = jsonDecode(jsonString);
+  List<Product_> products = productsJson.map((json) => Product_.fromJson(json)).toList();
+
+  return products;
+}
+
+/* Future<List<Product_>> getProducts() async {
+  try {
+    // Obtener la ruta del archivo JSON local
+    String path = Path.from("") 'productlist.json'; // Reemplaza con la ruta correcta
+    File file = File(path);
+
+    // Leer el contenido del archivo
+    String jsonString = await file.readAsString();
+
+    // Decodificar el JSON y convertirlo en una lista de productos
+    List<dynamic> productsJson = jsonDecode(jsonString);
+    List<Product_> products = productsJson.map((json) => Product_.fromJson(json)).toList();
+
+    return products;
+  } catch (e) {
+    print("Error al leer el archivo JSON local: $e");
+    return [];
+  }
+} */

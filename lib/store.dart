@@ -1,4 +1,4 @@
-import 'package:f_maps_firestore/Product.dart';
+import 'package:f_maps_firestore/product.dart';
 //import 'package:webfeed/webfeed.dart';
 import 'services/network.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ class StorePage extends StatefulWidget {
 
 class StorePageState extends State<StorePage> {
 
-  Future<List<Product>>? future;
+  Future<List<Product_>>? future;
 
   @override
   void initState() {
@@ -36,9 +36,9 @@ class StorePageState extends State<StorePage> {
   }
 
  Widget _body() {
-  return FutureBuilder<List<Product>>(
+  return FutureBuilder<List<Product_>>(
     future: getProducts(),
-    builder: (BuildContext context, AsyncSnapshot<List<Product>> snapshot) {
+    builder: (BuildContext context, AsyncSnapshot<List<Product_>> snapshot) {
       if (snapshot.connectionState == ConnectionState.waiting) {
         // Si el Future aún está en proceso, mostrar un indicador de carga
         return const Center(child: CircularProgressIndicator());
@@ -51,15 +51,15 @@ class StorePageState extends State<StorePage> {
           itemBuilder: (context, index) {
             final product = products[index];
             return Card(
-              color: Colors.blue.shade100,
+              color: const Color.fromARGB(255, 246, 246, 247),
               child: ListTile(
                 leading: SizedBox(
                   width: 50,
                   height: 60,
-                  child: Image.network(product.images[0]),
+                  child: Image.network(product.images),
                 ),
-                title: Text(product.title),
-                subtitle: Text(product.description),
+                title: Text(product.title, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+                subtitle: Text(product.price.toString()),
               ),
             );
           },

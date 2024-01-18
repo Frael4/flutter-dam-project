@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:f_maps_firestore/home.dart';
-import 'package:f_maps_firestore/map.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 import 'package:f_maps_firestore/firebase_options.dart';

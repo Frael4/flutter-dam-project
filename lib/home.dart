@@ -5,7 +5,7 @@ import 'map.dart';
 
 class HomeScreen extends StatelessWidget {
   final String usuario =
-      "Nombre de Usuario"; // Puedes cambiar esto por el nombre de tu usuario.
+      "Adm"; // Puedes cambiar esto por el nombre de tu usuario.
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Text(
               'Usuario: $usuario',
-              style: const TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20, color: Colors.white),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
