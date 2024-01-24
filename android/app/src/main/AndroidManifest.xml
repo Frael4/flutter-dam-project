@@ -5,7 +5,7 @@
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
 
     <application
-        android:label="f_maps_firestore"
+        android:label="Find Your Food"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
 

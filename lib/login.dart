@@ -1,12 +1,14 @@
 import 'dart:async';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:f_maps_firestore/home.dart';
+import 'package:f_maps_firestore/services/autenticacion.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 import 'package:f_maps_firestore/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-const user = 'adm';
-const pwd = '123';
+const user = '';
+const pwd = '';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,13 +25,15 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Find Your Food",
       home: const LogIn(title: 'Maps Flutter 3'),
-      theme: ThemeData(
+      theme: ThemeData
+          .dark() /* (
         // This is the theme of your application.
         scaffoldBackgroundColor: const Color.fromARGB(135, 75, 73, 73),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         //textTheme: TextTheme(),
         useMaterial3: true,
-      ),
+      ) */
+      ,
     );
   }
 }
@@ -49,6 +53,7 @@ class LogInState extends State<LogIn> {
   late TextEditingController userController;
   late TextEditingController passwordController;
 
+  //Estado Inicio
   @override
   void initState() {
     super.initState();
@@ -78,7 +83,8 @@ class LogInState extends State<LogIn> {
 
 // Valida Campos vacios
   bool isValid() {
-    return userController.text.isNotEmpty && passwordController.text.isNotEmpty;
+    // dev
+    return true; //userController.text.isNotEmpty && passwordController.text.isNotEmpty;
   }
 
 // Limpia campos
@@ -93,7 +99,15 @@ class LogInState extends State<LogIn> {
   }
 
 // Logeo
-  void logIn() {
+  void logIn() async {
+    DocumentSnapshot? datos = await iniciarSesion('juancho', '123');
+    String user = '', correo = '';
+
+    if (datos != null) {
+      user = datos.get('usuario');
+      correo = datos.get('correo');
+    }
+
     if (!isValid()) {
       showToast('action', '', 'Por favor llene los campos');
       return;
@@ -108,10 +122,11 @@ class LogInState extends State<LogIn> {
           'Iniciar Sesion',
           ' ${userController.text.trim()} pass: ${passwordController.text.trim()}',
           ' Acceso concedido');
+      // ignore: use_build_context_synchronously
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => HomeScreen(),
+            builder: (context) => HomeScreen(usuario: user, correo: correo,),
           ));
       clearTexts();
     }
@@ -136,7 +151,7 @@ class LogInState extends State<LogIn> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(30.0),
             child: TextField(
               style: const TextStyle(color: Colors.white),
               controller: passwordController,
@@ -150,13 +165,13 @@ class LogInState extends State<LogIn> {
           ),
           ElevatedButton(onPressed: logIn, child: const Text('Iniciar Sesion')),
           ElevatedButton(onPressed: () {}, child: const Text('Registrarse')),
-          ElevatedButton(
+          /* ElevatedButton(
               onPressed: () {
                 showToast('Salir');
                 Navigator.popUntil(context, (route) => route.isFirst);
               },
               child: const Text('Salir')
-              ),
+              ), */
         ],
       ),
     );

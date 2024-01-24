@@ -51,14 +51,14 @@ class StorePageState extends State<StorePage> {
           itemBuilder: (context, index) {
             final product = products[index];
             return Card(
-              color: const Color.fromARGB(255, 246, 246, 247),
+              /* color: const Color.fromARGB(255, 246, 246, 247), */
               child: ListTile(
                 leading: SizedBox(
                   width: 50,
                   height: 60,
                   child: Image.network(product.images),
                 ),
-                title: Text(product.title, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+                title: Text(product.title, /* style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold), */),
                 subtitle: Text(product.price.toString()),
               ),
             );
