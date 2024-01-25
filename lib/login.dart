@@ -1,8 +1,11 @@
 import 'dart:async';
+import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:f_maps_firestore/directions_provider.dart';
 import 'package:f_maps_firestore/home.dart';
 import 'package:f_maps_firestore/services/autenticacion.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:toast/toast.dart';
 import 'package:f_maps_firestore/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,20 +24,14 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ChangeNotifierProvider(
+      create: (_) => DirectionProvider(),
+      child: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Find Your Food",
       home: const LogIn(title: 'Maps Flutter 3'),
-      theme: ThemeData
-          .dark() /* (
-        // This is the theme of your application.
-        scaffoldBackgroundColor: const Color.fromARGB(135, 75, 73, 73),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        //textTheme: TextTheme(),
-        useMaterial3: true,
-      ) */
-      ,
-    );
+      theme: ThemeData.dark(),
+    ));
   }
 }
 
@@ -71,6 +68,7 @@ class LogInState extends State<LogIn> {
 
 //Muestra mensajes
   void showToast(String action, [data = '', String message = '']) {
+    
     if (action == 'Iniciar Sesion') {
       message += '$message $data';
     }
@@ -106,6 +104,8 @@ class LogInState extends State<LogIn> {
     if (datos != null) {
       user = datos.get('usuario');
       correo = datos.get('correo');
+
+      log(user);
     }
 
     if (!isValid()) {
@@ -142,7 +142,7 @@ class LogInState extends State<LogIn> {
                   color: Colors.amber, fontSize: 50, fontFamily: 'bold')),
           /* Image(image: ImageProvider), */
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.only(bottom: 20.0, left: 50.0, right: 50.0),
             child: TextField(
               style: const TextStyle(color: Colors.white),
               controller: userController,
@@ -151,7 +151,7 @@ class LogInState extends State<LogIn> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(30.0),
+            padding: const EdgeInsets.only(bottom: 20.0, left: 50.0, right: 50.0),
             child: TextField(
               style: const TextStyle(color: Colors.white),
               controller: passwordController,

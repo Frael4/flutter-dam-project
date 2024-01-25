@@ -16,6 +16,7 @@ dependencies:
   google_maps_webservice: ^0.0.20-nullsafety.5
   http: ^0.13.6
   location: ^5.0.3
+  provider: ^6.1.1
   toast: ^0.3.0
   webfeed: ^0.7.0
   

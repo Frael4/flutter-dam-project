@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                       builder: (context) => const MapPage(),
                     ));
               },
-              child: const Text('Buscar'),
+              child: const Text('Buscar Resurantes'),
             ),
             const SizedBox(height: 10),
             ElevatedButton(
