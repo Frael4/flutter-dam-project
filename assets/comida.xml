@@ -1,0 +1,38 @@
+<breakfast_menu>
+    <food>
+        <name>Belgian Waffles</name>
+        <price>$5.95</price>
+        <description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>
+        <calories>650</calories>
+        <image>https://stordfkenticomedia.blob.core.windows.net/df-us/rms/media/recipemediafiles/recipes/retail/x17/2020_belgian-style-waffles_16700_600x600.jpg?ext=.jpg</image>
+    </food>
+    <food>
+        <name>Strawberry Belgian Waffles</name>
+        <price>$7.95</price>
+        <description>Light Belgian waffles covered with strawberries and whipped cream</description>
+        <calories>900</calories>
+        <image>https://i0.wp.com/cupcakes-and-sarcasm.com/wp-content/uploads/2018/10/0CBB3C05-E91F-457F-B3D4-877FA6E04113.jpeg?resize=1470%2C680&ssl=1</image>
+    </food>
+    <food>
+        <name>Berry-Berry Belgian Waffles</name>
+        <price>$8.95</price>
+        <description>Light Belgian waffles covered with an assortment of fresh berries and whipped
+            cream</description>
+        <calories>900</calories>
+        <image>https://assets.wfcdn.com/im/49982288/resize-h755-w755%5Ecompr-r85/2178/217854424/Berry+Belgian+Waffle+On+Canvas+by+Bhofack2+Print.jpg</image>
+    </food>
+    <food>
+        <name>French Toast</name>
+        <price>$4.50</price>
+        <description>Thick slices made from our homemade sourdough bread</description>
+        <calories>600</calories>
+        <image>https://sugarspunrun.com/wp-content/uploads/2023/08/French-Toast-recipe-4-of-5.jpg</image>
+    </food>
+    <food>
+        <name>Homestyle Breakfast</name>
+        <price>$6.95</price>
+        <description>Two eggs, bacon or sausage, toast, and our ever-popular hash browns</description>
+        <calories>950</calories>
+        <image>https://www.restaurantmagazine.com/wp-content/uploads/2022/06/Cracker-Barrel-Old-Country-Store-Upgrades-All-Day-Homestyle-Breakfast-Offerings-with-New-Menu-Format-Selections-768x849.jpg</image>
+    </food>
+</breakfast_menu>

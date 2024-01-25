@@ -2,9 +2,9 @@ import 'dart:developer';
 
 import 'package:f_maps_firestore/login.dart';
 import 'package:f_maps_firestore/model/usuario.dart';
-import 'package:f_maps_firestore/store.dart';
+//import 'package:f_maps_firestore/store.dart';
 import 'package:flutter/material.dart';
-
+import 'Restaurantes_page.dart';
 import 'map.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
             
           ), */
             ListTile(
-              title: const Text('Buscar Resurantes'),
+              title: const Text('Resurantes Cerca'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -56,12 +56,12 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Productos'),
+              title: const Text('Pedir a domicilio'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const StorePage(),
+                    builder: (context) => const RestaurantesPage(),
                   ),
                 );
               },
@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                       builder: (context) => const MapPage(),
                     ));
               },
-              child: const Text('Buscar Resurantes'),
+              child: const Text('Resurantes cerca'),
             ),
             const SizedBox(height: 10),
             ElevatedButton(
@@ -113,11 +113,11 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const StorePage(),
+                      builder: (context) => const RestaurantesPage(),
                     ));
-                log('Productos');
+                log('Pedir a Domicilio');
               },
-              child: const Text('Productos'),
+              child: const Text('Pedir a Domicilio'),
             ),
           ],
         ),

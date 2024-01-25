@@ -36,7 +36,7 @@ class MapPage extends StatefulWidget {
 }
 
 class _MapPageState extends State<MapPage> {
-  late Stream<QuerySnapshot> _iceCreamStores;
+  //late Stream<QuerySnapshot> _iceCreamStores;
   final Completer<GoogleMapController> googleMapController = Completer();
   // ignore: prefer_typing_uninitialized_variables
   var currentPosition;
@@ -54,10 +54,10 @@ class _MapPageState extends State<MapPage> {
 
     getNearbyRestaurants();
 
-    _iceCreamStores = FirebaseFirestore.instance
+    /* _iceCreamStores = FirebaseFirestore.instance
         .collection('ice_cream_stores')
         .orderBy('name')
-        .snapshots();
+        .snapshots(); */
   }
 
   Future<void> _initializeLocation() async {

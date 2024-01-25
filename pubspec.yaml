@@ -19,6 +19,7 @@ dependencies:
   provider: ^6.1.1
   toast: ^0.3.0
   webfeed: ^0.7.0
+  xml: ^5.4.1
   
 
 dev_dependencies:
@@ -31,3 +32,5 @@ flutter:
   assets:
     - assets/productlist.json
     - assets/imagen_usuario.jpg
+    - assets/Restaurantes.xml
+    - assets/comida.xml
