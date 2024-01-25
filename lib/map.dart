@@ -378,6 +378,15 @@ class _MapPageState extends State<MapPage> {
               mapController: googleMapController,
               markers: markers,
             ),
+            const Padding(
+            padding: const EdgeInsets.only(bottom: 20.0, left: 50.0, right: 50.0),
+            child: TextField(
+              style: const TextStyle(color: Colors.white),
+              /* controller: , */
+              decoration: const InputDecoration(labelText: 'Ubicacion cambiar'),
+              maxLength: 25,
+            ),
+          )
             /* StoreCarousel(
                     mapController: googleMapController,
                     documents: snapshot.data!.docs,

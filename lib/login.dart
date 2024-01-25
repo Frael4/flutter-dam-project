@@ -10,9 +10,6 @@ import 'package:toast/toast.dart';
 import 'package:f_maps_firestore/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-const user = '';
-const pwd = '';
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -25,13 +22,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => DirectionProvider(),
-      child: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Find Your Food",
-      home: const LogIn(title: 'Maps Flutter 3'),
-      theme: ThemeData.dark(),
-    ));
+        create: (_) => DirectionProvider(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: "Find Your Food",
+          home: const LogIn(title: 'Maps Flutter 3'),
+          theme: ThemeData.dark(),
+        ));
   }
 }
 
@@ -68,7 +65,6 @@ class LogInState extends State<LogIn> {
 
 //Muestra mensajes
   void showToast(String action, [data = '', String message = '']) {
-    
     if (action == 'Iniciar Sesion') {
       message += '$message $data';
     }
@@ -81,8 +77,7 @@ class LogInState extends State<LogIn> {
 
 // Valida Campos vacios
   bool isValid() {
-    // dev
-    return true; //userController.text.isNotEmpty && passwordController.text.isNotEmpty;
+    return userController.text.isNotEmpty && passwordController.text.isNotEmpty;
   }
 
 // Limpia campos
@@ -92,13 +87,14 @@ class LogInState extends State<LogIn> {
   }
 
 // Verifica usuario existe
-  bool existUser() {
+  /* bool existUser() {
     return userController.text == user && passwordController.text == pwd;
-  }
+  } */
 
 // Logeo
   void logIn() async {
-    DocumentSnapshot? datos = await iniciarSesion('juancho', '123');
+    DocumentSnapshot? datos =
+        await iniciarSesion(userController.text, passwordController.text);
     String user = '', correo = '';
 
     if (datos != null) {
@@ -106,6 +102,9 @@ class LogInState extends State<LogIn> {
       correo = datos.get('correo');
 
       log(user);
+    } else {
+      showToast('action', '', 'Usuario no existe');
+      return;
     }
 
     if (!isValid()) {
@@ -113,23 +112,26 @@ class LogInState extends State<LogIn> {
       return;
     }
 
-    if (!existUser()) {
+    /* if (!existUser()) {
       showToast('action', '', 'Error en las credenciales de acceso');
-    }
+    } */
 
-    if (existUser()) {
-      showToast(
-          'Iniciar Sesion',
-          ' ${userController.text.trim()} pass: ${passwordController.text.trim()}',
-          ' Acceso concedido');
-      // ignore: use_build_context_synchronously
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => HomeScreen(usuario: user, correo: correo,),
-          ));
-      clearTexts();
-    }
+    /* if (existUser()) { */
+    showToast(
+        'Iniciar Sesion',
+        ' ${userController.text.trim()} pass: ${passwordController.text.trim()}',
+        ' Acceso concedido');
+    // ignore: use_build_context_synchronously
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomeScreen(
+            usuario: user,
+            correo: correo,
+          ),
+        ));
+    clearTexts();
+    /* } */
   }
 
   Widget formLogIn() {
@@ -142,7 +144,8 @@ class LogInState extends State<LogIn> {
                   color: Colors.amber, fontSize: 50, fontFamily: 'bold')),
           /* Image(image: ImageProvider), */
           Padding(
-            padding: const EdgeInsets.only(bottom: 20.0, left: 50.0, right: 50.0),
+            padding:
+                const EdgeInsets.only(bottom: 20.0, left: 50.0, right: 50.0),
             child: TextField(
               style: const TextStyle(color: Colors.white),
               controller: userController,
@@ -151,7 +154,8 @@ class LogInState extends State<LogIn> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 20.0, left: 50.0, right: 50.0),
+            padding:
+                const EdgeInsets.only(bottom: 20.0, left: 50.0, right: 50.0),
             child: TextField(
               style: const TextStyle(color: Colors.white),
               controller: passwordController,

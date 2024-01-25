@@ -1,7 +1,8 @@
 import 'dart:developer';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
+//import 'package:flutter/services.dart' show rootBundle;
 import 'CarritoPage.dart';
 import 'PlatosRestaurantePage.dart';
 import 'package:xml/xml.dart' as xml;
@@ -65,6 +66,30 @@ class Restaurante {
 
     return Restaurante(nombre, direccion, imagen, platos);
   }
+
+  factory Restaurante.fromSnapshot(DocumentSnapshot doc) {
+    Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+    List<dynamic> platos = data['platos'] as List<dynamic>;
+    //DocumentSnapshot platos = data['platos'] as DocumentSnapshot;
+    //log(platos.toString());
+    List<Plato> pla = platos.map((e) {
+      String nombrePlato = e['nombre'];
+      String imagenPlato = e['imagen'];
+      double precioPlato = double.parse(e['precio']);
+
+      Map<String, dynamic> details = e['detalles'] as Map<String, dynamic>;
+
+      DetallePlato detalle = DetallePlato(
+          details['nombre'],
+          details['descripcion'],
+          details['imagen'],
+          double.parse(details['precio']));
+
+      return Plato(nombrePlato, imagenPlato, precioPlato, detalle);
+    }).toList();
+
+    return Restaurante(doc['nombre'], doc['direccion'], doc['imagen'], pla);
+  }
 }
 
 class RestaurantesPage extends StatelessWidget {
@@ -82,8 +107,8 @@ class RestaurantesPage extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CarritoPage(
-                      productos: const [], // Asegúrate de pasar un producto válido aquí
+                    builder: (context) => const CarritoPage(
+                      productos: [], // Asegúrate de pasar un producto válido aquí
                     ),
                   ));
             },
@@ -91,7 +116,7 @@ class RestaurantesPage extends StatelessWidget {
         ],
       ),
       body: FutureBuilder(
-        future: _loadXmlData(context),
+        future: getRestaurantes(context),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             return SingleChildScrollView(
@@ -118,26 +143,27 @@ class RestaurantesPage extends StatelessWidget {
     );
   }
 
-  Future<List<Widget>> _loadXmlData(BuildContext context) async {
+  Future<List<Widget>> getRestaurantes(BuildContext context) async {
     try {
-      final String xmlString =
-          await rootBundle.loadString('assets/Restaurantes.xml');
-      final document = xml.XmlDocument.parse(xmlString);
+      CollectionReference restaurantes =
+          FirebaseFirestore.instance.collection('restaurantes');
 
-      List<Restaurante> restaurantes = document
-          .findElements('breakfast_menu')
-          .single
-          .findElements('restaurante')
-          .map((restauranteElement) => Restaurante.fromXml(restauranteElement))
+      QuerySnapshot querySnapshot = await restaurantes.get();
+
+      List<Restaurante> restaurantesList = querySnapshot.docs
+          .map((restauranteElement) =>
+              Restaurante.fromSnapshot(restauranteElement))
           .toList();
 
-      return restaurantes
+      return restaurantesList
           .map((restaurante) => _buildRestauranteCard(context, restaurante))
           .toList();
-    } catch (error) {
-      log('Error al cargar y procesar el archivo XML: $error');
+      
+    } catch (e) {
+      log('Error: $e');
       return [];
     }
+
   }
 
   Widget _buildRestauranteCard(BuildContext context, Restaurante restaurante) {

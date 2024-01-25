@@ -1,0 +1,18 @@
+{
+    "usuarios": [
+        {
+            "nombres": "Juancho",
+            "apellidos": "Fernandez",
+            "contrasenia": "123",
+            "correo": "juancho@fernandez.com",
+            "usuario": "juancho"
+        },
+        {
+            "nombres": "Fernando",
+            "apellidos": "Jimenez",
+            "contrasenia": "123",
+            "correo": "fer@jimenez.com",
+            "usuario": "fercho"
+        }
+    ]
+}
