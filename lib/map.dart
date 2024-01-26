@@ -25,9 +25,8 @@ const hue = 350.0;
 final _placesApiClient = GoogleMapsPlaces(apiKey: googleMapsApiKey);
 
 class MapPage extends StatefulWidget {
-  /* const MapPage({required this.title, super.key}); */
+  
   const MapPage({super.key});
-  /* final String title; */
 
   @override
   State<StatefulWidget> createState() {
@@ -36,7 +35,7 @@ class MapPage extends StatefulWidget {
 }
 
 class _MapPageState extends State<MapPage> {
-  //late Stream<QuerySnapshot> _iceCreamStores;
+  
   final Completer<GoogleMapController> googleMapController = Completer();
   // ignore: prefer_typing_uninitialized_variables
   var currentPosition;
@@ -53,11 +52,6 @@ class _MapPageState extends State<MapPage> {
     _initializeLocation();
 
     getNearbyRestaurants();
-
-    /* _iceCreamStores = FirebaseFirestore.instance
-        .collection('ice_cream_stores')
-        .orderBy('name')
-        .snapshots(); */
   }
 
   Future<void> _initializeLocation() async {
@@ -357,22 +351,10 @@ class _MapPageState extends State<MapPage> {
         appBar: AppBar(
           title: const Text('Ubicacion'), //Text(widget.title),
         ),
-        body: /*StreamBuilder<QuerySnapshot>(
-        stream: _iceCreamStores,
-        builder:  (context, snapshot) {
-          return switch (snapshot) {
-            AsyncSnapshot(hasError: true) => Center(
-                  child: Text(
-                'Error: ${snapshot.error}',
-                //style: const TextStyle(color: Colors.white),
-              )),
-            AsyncSnapshot(hasData: false) =>
-              const Center(child: Text('Loading ...')),
-            _ => */
+        body:
             Stack(
           children: [
             StoreMap(
-              /* documents: snapshot.data!.docs, */
               initialPosition: currentPosition, //initialPosition,
               mapController: googleMapController,
               markers: markers,
@@ -385,14 +367,10 @@ class _MapPageState extends State<MapPage> {
                   decoration: InputDecoration(
                     labelText: 'Cambiar ubicacion',
                     filled: true,
-                    fillColor: Color.fromARGB(255, 43, 42, 42), // Color de fondo que desees
+                    fillColor: Color.fromARGB(255, 43, 42, 42), // Color de fondo
                   ),
                   maxLength: 25,
                 ),
-                /* decoration: BoxDecoration(
-                  color: Colors.blue, // Color de fondo que desees
-                  borderRadius: BorderRadius.circular(10.0),
-                ) */
                 ),
             /* StoreCarousel(
                     mapController: googleMapController,
@@ -400,9 +378,6 @@ class _MapPageState extends State<MapPage> {
                   ) */
           ],
         )
-        /*   };
-        },
-      ), */
         );
   }
 }
