@@ -232,8 +232,7 @@ class _MapPageState extends State<MapPage> {
             var data = snapshot.data!.result;
             var number = data.formattedPhoneNumber ?? 'Sin numero';
             var photoUrl = _placesApiClient.buildPhotoUrl(
-              photoReference: data.photos[0].photoReference,
-              maxHeight: 350);
+                photoReference: data.photos[0].photoReference, maxHeight: 350);
 
             return Stack(
               children: <Widget>[
@@ -379,14 +378,22 @@ class _MapPageState extends State<MapPage> {
               markers: markers,
             ),
             const Padding(
-            padding: const EdgeInsets.only(bottom: 20.0, left: 50.0, right: 50.0),
-            child: TextField(
-              style: const TextStyle(color: Colors.white),
-              /* controller: , */
-              decoration: const InputDecoration(labelText: 'Ubicacion cambiar'),
-              maxLength: 25,
-            ),
-          )
+                padding: EdgeInsets.only(
+                    bottom: 1.0, left: 10.0, right: 30.0, top: 10.0),
+                child: TextField(
+                  style:  TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    labelText: 'Cambiar ubicacion',
+                    filled: true,
+                    fillColor: Color.fromARGB(255, 43, 42, 42), // Color de fondo que desees
+                  ),
+                  maxLength: 25,
+                ),
+                /* decoration: BoxDecoration(
+                  color: Colors.blue, // Color de fondo que desees
+                  borderRadius: BorderRadius.circular(10.0),
+                ) */
+                ),
             /* StoreCarousel(
                     mapController: googleMapController,
                     documents: snapshot.data!.docs,

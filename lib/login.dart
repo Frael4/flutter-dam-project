@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:f_maps_firestore/directions_provider.dart';
 import 'package:f_maps_firestore/home.dart';
 import 'package:f_maps_firestore/services/autenticacion.dart';
+import 'package:f_maps_firestore/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:toast/toast.dart';
@@ -168,7 +169,15 @@ class LogInState extends State<LogIn> {
             height: 20,
           ),
           ElevatedButton(onPressed: logIn, child: const Text('Iniciar Sesion')),
-          ElevatedButton(onPressed: () {}, child: const Text('Registrarse')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpScreen()
+                    ));
+              },
+              child: const Text('Registrarse')),
           /* ElevatedButton(
               onPressed: () {
                 showToast('Salir');

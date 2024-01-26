@@ -118,243 +118,9 @@
             ]
         },
         {
-            "nombre": "Carlsjr",
-            "direccion": "9 de Octubre, Guayaquil 090150 Ecuador",
-            "imagen": "https://www.metroecuador.com.ec/resizer/m5MuzWlQXRBu-M-dzekzuWMIQ7c=/800x0/filters:format(png):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/5DLNNHJ6LRHGFGKUF3XIC7J7LA.png",
-            "platos": [
-                {
-                    "nombre": "SORRENTO",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                    "precio": "79.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "79.00"
-                    }
-                },
-                {
-                    "nombre": "BANDEJA ARCOIRIS",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men2.jpg",
-                    "precio": "79.00",
-                    "detalles": {
-                        "nombre": "BANDEJA ARCOIRIS",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "79.00"
-                    }
-                },
-                {
-                    "nombre": "PARMIGIANA DI MELANZANE",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men5.jpg",
-                    "precio": "17.75",
-                    "detalles": {
-                        "nombre": "PARMIGIANA DI MELANZANE",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "17.75"
-                    }
-                },
-                {
-                    "nombre": "PROSCIUTTO E BURRATA",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men4.jpg",
-                    "precio": "29.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "29.00"
-                    }
-                },
-                {
-                    "nombre": "CROCANTITOS DE CORVINA",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men6.jpg",
-                    "precio": "19.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "79.00"
-                    }
-                },
-                {
-                    "nombre": "PACCHERI DI VERONA",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men13.jpg",
-                    "precio": "20.90",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "20.90"
-                    }
-                },
-                {
-                    "nombre": "TAGLIERINI NERI CON GAMBERI",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men12.jpg",
-                    "precio": "38.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "38.00"
-                    }
-                },
-                {
-                    "nombre": "RISOTTO RE UMBERTO",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men15.jpg",
-                    "precio": "45.50",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "45.50"
-                    }
-                },
-                {
-                    "nombre": "RISOTTO MUSSOLINI",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men14.jpg",
-                    "precio": "45.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "45.00"
-                    }
-                },
-                {
-                    "nombre": "PIZZA con BURRATA",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men36.jpg",
-                    "precio": "21.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "21.00"
-                    }
-                }
-            ]
-        },
-        {
-            "nombre": "Mc donalds",
-            "direccion": "9 de Octubre, Guayaquil 090150 Ecuador",
-            "imagen": "https://www.mcdonalds.com.ec/uploads/WEB_Banner_1200x520_Cheddar_Mc_Melt_JUL_23_d022482d78.jpg",
-            "platos": [
-                {
-                    "nombre": "SORRENTO",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                    "precio": "79.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "79.00"
-                    }
-                },
-                {
-                    "nombre": "BANDEJA ARCOIRIS",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men2.jpg",
-                    "precio": "79.00",
-                    "detalles": {
-                        "nombre": "BANDEJA ARCOIRIS",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "79.00"
-                    }
-                },
-                {
-                    "nombre": "PARMIGIANA DI MELANZANE",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men5.jpg",
-                    "precio": "17.75",
-                    "detalles": {
-                        "nombre": "PARMIGIANA DI MELANZANE",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "17.75"
-                    }
-                },
-                {
-                    "nombre": "PROSCIUTTO E BURRATA",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men4.jpg",
-                    "precio": "29.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "29.00"
-                    }
-                },
-                {
-                    "nombre": "CROCANTITOS DE CORVINA",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men6.jpg",
-                    "precio": "19.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "79.00"
-                    }
-                },
-                {
-                    "nombre": "PACCHERI DI VERONA",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men13.jpg",
-                    "precio": "20.90",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "20.90"
-                    }
-                },
-                {
-                    "nombre": "TAGLIERINI NERI CON GAMBERI",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men12.jpg",
-                    "precio": "38.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "38.00"
-                    }
-                },
-                {
-                    "nombre": "RISOTTO RE UMBERTO",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men15.jpg",
-                    "precio": "45.50",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "45.50"
-                    }
-                },
-                {
-                    "nombre": "RISOTTO MUSSOLINI",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men14.jpg",
-                    "precio": "45.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "45.00"
-                    }
-                },
-                {
-                    "nombre": "PIZZA con BURRATA",
-                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men36.jpg",
-                    "precio": "21.00",
-                    "detalles": {
-                        "nombre": "SORRENTO",
-                        "descripcion": "pescado",
-                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
-                        "precio": "21.00"
-                    }
-                }
-            ]
-        },
-        {
-            "nombre": "Wendys",
+            "nombre": "Riviera Restaurante Italiano",
             "direccion": "V.E. Estrada 707 y Ficus, Guayaquil 090150 Ecuador",
-            "imagen": "https://d9jydb2dshkcf.cloudfront.net/wp-content/uploads/2021/10/logo_footer.png",
+            "imagen": "http://rivieraecuador.com/wp-content/uploads/2024/01/home7.jpg",
             "platos": [
                 {
                     "nombre": "SORRENTO",
@@ -469,9 +235,243 @@
             ]
         },
         {
-            "nombre": "KFC",
-            "direccion": "9 DE Octubre, Guayaquil 090150 Ecuador",
-            "imagen": "https://franquiciaecuador.com/wp-content/uploads/2023/04/franquicia-kfc-1210x423.jpg",
+            "nombre": "Riviera Restaurante Italiano",
+            "direccion": "V.E. Estrada 707 y Ficus, Guayaquil 090150 Ecuador",
+            "imagen": "http://rivieraecuador.com/wp-content/uploads/2024/01/home7.jpg",
+            "platos": [
+                {
+                    "nombre": "SORRENTO",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                    "precio": "79.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "79.00"
+                    }
+                },
+                {
+                    "nombre": "BANDEJA ARCOIRIS",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men2.jpg",
+                    "precio": "79.00",
+                    "detalles": {
+                        "nombre": "BANDEJA ARCOIRIS",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "79.00"
+                    }
+                },
+                {
+                    "nombre": "PARMIGIANA DI MELANZANE",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men5.jpg",
+                    "precio": "17.75",
+                    "detalles": {
+                        "nombre": "PARMIGIANA DI MELANZANE",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "17.75"
+                    }
+                },
+                {
+                    "nombre": "PROSCIUTTO E BURRATA",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men4.jpg",
+                    "precio": "29.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "29.00"
+                    }
+                },
+                {
+                    "nombre": "CROCANTITOS DE CORVINA",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men6.jpg",
+                    "precio": "19.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "79.00"
+                    }
+                },
+                {
+                    "nombre": "PACCHERI DI VERONA",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men13.jpg",
+                    "precio": "20.90",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "20.90"
+                    }
+                },
+                {
+                    "nombre": "TAGLIERINI NERI CON GAMBERI",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men12.jpg",
+                    "precio": "38.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "38.00"
+                    }
+                },
+                {
+                    "nombre": "RISOTTO RE UMBERTO",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men15.jpg",
+                    "precio": "45.50",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "45.50"
+                    }
+                },
+                {
+                    "nombre": "RISOTTO MUSSOLINI",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men14.jpg",
+                    "precio": "45.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "45.00"
+                    }
+                },
+                {
+                    "nombre": "PIZZA con BURRATA",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men36.jpg",
+                    "precio": "21.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "21.00"
+                    }
+                }
+            ]
+        },
+        {
+            "nombre": "Riviera Restaurante Italiano",
+            "direccion": "V.E. Estrada 707 y Ficus, Guayaquil 090150 Ecuador",
+            "imagen": "http://rivieraecuador.com/wp-content/uploads/2024/01/home7.jpg",
+            "platos": [
+                {
+                    "nombre": "SORRENTO",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                    "precio": "79.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "79.00"
+                    }
+                },
+                {
+                    "nombre": "BANDEJA ARCOIRIS",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men2.jpg",
+                    "precio": "79.00",
+                    "detalles": {
+                        "nombre": "BANDEJA ARCOIRIS",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "79.00"
+                    }
+                },
+                {
+                    "nombre": "PARMIGIANA DI MELANZANE",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men5.jpg",
+                    "precio": "17.75",
+                    "detalles": {
+                        "nombre": "PARMIGIANA DI MELANZANE",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "17.75"
+                    }
+                },
+                {
+                    "nombre": "PROSCIUTTO E BURRATA",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men4.jpg",
+                    "precio": "29.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "29.00"
+                    }
+                },
+                {
+                    "nombre": "CROCANTITOS DE CORVINA",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men6.jpg",
+                    "precio": "19.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "79.00"
+                    }
+                },
+                {
+                    "nombre": "PACCHERI DI VERONA",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men13.jpg",
+                    "precio": "20.90",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "20.90"
+                    }
+                },
+                {
+                    "nombre": "TAGLIERINI NERI CON GAMBERI",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men12.jpg",
+                    "precio": "38.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "38.00"
+                    }
+                },
+                {
+                    "nombre": "RISOTTO RE UMBERTO",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men15.jpg",
+                    "precio": "45.50",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "45.50"
+                    }
+                },
+                {
+                    "nombre": "RISOTTO MUSSOLINI",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men14.jpg",
+                    "precio": "45.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "45.00"
+                    }
+                },
+                {
+                    "nombre": "PIZZA con BURRATA",
+                    "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men36.jpg",
+                    "precio": "21.00",
+                    "detalles": {
+                        "nombre": "SORRENTO",
+                        "descripcion": "pescado",
+                        "imagen": "http://rivieraecuador.com/wp-content/uploads/2023/07/men1-1.jpg",
+                        "precio": "21.00"
+                    }
+                }
+            ]
+        },
+        {
+            "nombre": "Riviera Restaurante Italiano",
+            "direccion": "V.E. Estrada 707 y Ficus, Guayaquil 090150 Ecuador",
+            "imagen": "http://rivieraecuador.com/wp-content/uploads/2024/01/home7.jpg",
             "platos": [
                 {
                     "nombre": "SORRENTO",

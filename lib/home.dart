@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:f_maps_firestore/login.dart';
-import 'package:f_maps_firestore/model/usuario.dart';
 //import 'package:f_maps_firestore/store.dart';
 import 'package:flutter/material.dart';
 import 'Restaurantes_page.dart';
@@ -27,8 +26,8 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text(Usuario.usuario),
-              accountEmail: Text(Usuario.correo),
+              accountName: Text(usuario),
+              accountEmail: Text(correo),
               currentAccountPicture: const CircleAvatar(
                 backgroundImage:
                     AssetImage('assets/imagen_usuario.jpg'), // Imagen
