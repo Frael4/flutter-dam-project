@@ -4,6 +4,7 @@ import 'package:f_maps_firestore/login.dart';
 import 'package:f_maps_firestore/model/usuario.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:toast/toast.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -112,8 +113,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
       // Añadir datos a la colección
       users.add(newUsuario.toMap()).then((value) {
         log('Datos agregados con éxito. Documento ID: ${value.id}');
+        showToast('Usuario registrado correctamente');
       }).catchError((error) {
         log('Error al agregar datos: $error');
+        showToast('Error al agregar datos: $error');
       });
 
       limpiarTexts();
@@ -129,5 +132,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
       log('Error al registrar al usuario: $e');
       // Puedes mostrar un mensaje de error al usuario si el registro falla
     }
+  }
+
+  //Muestra mensajes
+  void showToast(String message) {
+    Toast.show(message, duration: Toast.lengthLong, gravity: Toast.bottom);
   }
 }

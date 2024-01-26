@@ -1,5 +1,5 @@
+import 'package:f_maps_firestore/model/plato.dart';
 import 'package:flutter/material.dart';
-import 'Restaurantes_page.dart';
 import 'detalleplatopage.dart';
 
 class PlatosRestaurantePage extends StatelessWidget {

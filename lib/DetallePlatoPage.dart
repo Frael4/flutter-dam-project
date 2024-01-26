@@ -1,5 +1,7 @@
+import 'package:f_maps_firestore/model/detalle_plato.dart';
+import 'package:f_maps_firestore/model/plato.dart';
+import 'package:f_maps_firestore/model/producto_carrito.dart';
 import 'package:flutter/material.dart';
-import 'Restaurantes_page.dart';
 import 'CarritoPage.dart'; // Asegúrate de importar CarritoPage
 
 class DetallePlatoPage extends StatefulWidget {

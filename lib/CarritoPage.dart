@@ -1,18 +1,6 @@
 import 'dart:developer';
+import 'package:f_maps_firestore/model/producto_carrito.dart';
 import 'package:flutter/material.dart';
-import 'Restaurantes_page.dart';
-
-class ProductoCarrito {
-  final Plato producto;
-  final int cantidad;
-  final double precioTotal;
-
-  ProductoCarrito({
-    required this.producto,
-    required this.cantidad,
-    required this.precioTotal,
-  });
-}
 
 class CarritoPage extends StatefulWidget {
   final List<ProductoCarrito> productos;

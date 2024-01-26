@@ -87,11 +87,6 @@ class LogInState extends State<LogIn> {
     passwordController.text = '';
   }
 
-// Verifica usuario existe
-  /* bool existUser() {
-    return userController.text == user && passwordController.text == pwd;
-  } */
-
 // Logeo
   void logIn() async {
     DocumentSnapshot? datos =
@@ -113,11 +108,6 @@ class LogInState extends State<LogIn> {
       return;
     }
 
-    /* if (!existUser()) {
-      showToast('action', '', 'Error en las credenciales de acceso');
-    } */
-
-    /* if (existUser()) { */
     showToast(
         'Iniciar Sesion',
         ' ${userController.text.trim()} pass: ${passwordController.text.trim()}',
@@ -132,7 +122,6 @@ class LogInState extends State<LogIn> {
           ),
         ));
     clearTexts();
-    /* } */
   }
 
   Widget formLogIn() {
@@ -178,13 +167,6 @@ class LogInState extends State<LogIn> {
                     ));
               },
               child: const Text('Registrarse')),
-          /* ElevatedButton(
-              onPressed: () {
-                showToast('Salir');
-                Navigator.popUntil(context, (route) => route.isFirst);
-              },
-              child: const Text('Salir')
-              ), */
         ],
       ),
     );

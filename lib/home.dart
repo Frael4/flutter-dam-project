@@ -36,13 +36,6 @@ class HomeScreen extends StatelessWidget {
                 color: Color.fromARGB(255, 17, 27, 54),
               ),
             ),
-            /* const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 243, 187, 33),
-            ),
-            child: Text('Menú'),
-            
-          ), */
             ListTile(
               title: const Text('Resurantes Cerca'),
               onTap: () {

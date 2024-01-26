@@ -1,96 +1,11 @@
 import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:f_maps_firestore/model/restaurante.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter/services.dart' show rootBundle;
 import 'CarritoPage.dart';
 import 'PlatosRestaurantePage.dart';
-import 'package:xml/xml.dart' as xml;
-
-class Plato {
-  final String nombre;
-  final String imagen;
-  final double precio;
-  final DetallePlato detalles;
-
-  Plato(this.nombre, this.imagen, this.precio, this.detalles);
-}
-
-class DetallePlato {
-  final String nombre;
-  final String descripcion;
-  final String imagen;
-  final double precio;
-
-  DetallePlato(this.nombre, this.descripcion, this.imagen, this.precio);
-}
-
-class Restaurante {
-  final String nombre;
-  final String direccion;
-  final String imagen;
-  final List<Plato> platos;
-
-  Restaurante(this.nombre, this.direccion, this.imagen, this.platos);
-
-  factory Restaurante.fromXml(xml.XmlElement element) {
-    String nombre = element.findElements('nombre').single.text;
-    String direccion = element.findElements('direccion').single.text;
-    String imagen = element.findElements('imagen').single.text;
-
-    List<Plato> platos = element
-        .findElements('platos')
-        .single
-        .findElements('plato')
-        .map((platoElement) {
-      String nombrePlato = platoElement.findElements('nombre').single.text;
-      String imagenPlato = platoElement.findElements('imagen').single.text;
-      double precioPlato =
-          double.parse(platoElement.findElements('precio').single.text);
-
-      // Detalles del plato
-      xml.XmlElement detallesElement =
-          platoElement.findElements('detalles').single;
-      String nombreDetalle = detallesElement.findElements('nombre').single.text;
-      String descripcionDetalle =
-          detallesElement.findElements('descripcion').single.text;
-      String imagenDetalle = detallesElement.findElements('imagen').single.text;
-      double precioDetalle =
-          double.parse(detallesElement.findElements('precio').single.text);
-
-      DetallePlato detalles = DetallePlato(
-          nombreDetalle, descripcionDetalle, imagenDetalle, precioDetalle);
-
-      return Plato(nombrePlato, imagenPlato, precioPlato, detalles);
-    }).toList();
-
-    return Restaurante(nombre, direccion, imagen, platos);
-  }
-
-  factory Restaurante.fromSnapshot(DocumentSnapshot doc) {
-    Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
-    List<dynamic> platos = data['platos'] as List<dynamic>;
-    //DocumentSnapshot platos = data['platos'] as DocumentSnapshot;
-    //log(platos.toString());
-    List<Plato> pla = platos.map((e) {
-      String nombrePlato = e['nombre'];
-      String imagenPlato = e['imagen'];
-      double precioPlato = double.parse(e['precio']);
-
-      Map<String, dynamic> details = e['detalles'] as Map<String, dynamic>;
-
-      DetallePlato detalle = DetallePlato(
-          details['nombre'],
-          details['descripcion'],
-          details['imagen'],
-          double.parse(details['precio']));
-
-      return Plato(nombrePlato, imagenPlato, precioPlato, detalle);
-    }).toList();
-
-    return Restaurante(doc['nombre'], doc['direccion'], doc['imagen'], pla);
-  }
-}
 
 class RestaurantesPage extends StatelessWidget {
   const RestaurantesPage({super.key});
